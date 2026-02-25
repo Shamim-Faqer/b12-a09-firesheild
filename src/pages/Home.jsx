@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
+import Hero from '../components/Hero';
+import NewsLetter from '../components/NewsLetter';
+import Aboutme from '../components/Aboutme';
+import Contactus from '../components/Contactus';
+import Games from '../pages/Games';
+
+
 
 function Home() {
   return (
-    <div><h2 className='text-5xl font-bold text-center py-5 bg-primary-content'>Ami Home</h2></div>
+  <div>
+    <Hero></Hero>
+      <NewsLetter></NewsLetter>
+     <Aboutme></Aboutme>
+    <Contactus></Contactus>
+<Games></Games>
+   
+  </div>
   )
 }
 
-export default Home
+export default Home;

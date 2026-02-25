@@ -3,8 +3,8 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-      <div className="reserved">
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+      <div className="reserved bg-[#121212] text-white ">
+        <footer className="footer footer-horizontal footer-center   rounded p-10">
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>
