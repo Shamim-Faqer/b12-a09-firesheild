@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import NewsLetter from '../components/NewsLetter';
 import Aboutme from '../components/Aboutme';
 import Contactus from '../components/Contactus';
-import Games from '../pages/Games';
+import TrendingGames from '../layout/TrendingGames';
 
 
 
@@ -12,9 +12,10 @@ function Home() {
   <div>
     <Hero></Hero>
       <NewsLetter></NewsLetter>
+      <TrendingGames></TrendingGames>
      <Aboutme></Aboutme>
     <Contactus></Contactus>
-<Games></Games>
+
    
   </div>
   )

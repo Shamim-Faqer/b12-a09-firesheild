@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 // #0D0D0D
 // #212226
 function Header() {
@@ -14,23 +15,23 @@ function Header() {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li>About</li>
-        <li>Games</li>
-        <li>Contact us</li>
+        <NavLink>About</NavLink>
+        <NavLink to={"games"}>Games</NavLink>
+        <NavLink>Contact us</NavLink>
         
       </ul>
     </div>
-    <a className="btn btn-ghost btn-primary text-white text-xl">FireSheild</a>
+    <NavLink to={"/"} className="btn btn-ghost btn-primary text-white text-xl">FireSheild</NavLink>
   </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>About</a></li>
-      <li><a>Games</a></li>
-      <li><a>Contact us</a></li>
+  <div className="navbar-center hidden lg:flex ">
+    <ul className="menu menu-horizontal">
+      <NavLink className="p-3" >About</NavLink>
+        <NavLink to={"games"} className="p-3">Games</NavLink>
+        <NavLink className="p-3">Contact us</NavLink>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn btn-ghost btn-primary text-white ">Login</a>
+    <NavLink to={"login"} className="btn btn-ghost btn-primary text-white ">Login</NavLink>
   </div>
 </div>
       </div>
