@@ -1,8 +1,26 @@
-import React from 'react'
+import button from 'daisyui/components/button';
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
+import {AuthContext} from "../provider/AuthProvider";
+
+
+
+
 // #0D0D0D
 // #212226
 function Header() {
+
+  const {user, logoutUser} = useContext(AuthContext);
+
+  const handleLogout = () => {
+logoutUser()
+.then(() => {
+  alert("Log Out Successfully");
+})
+.catch(error => console.log(error));
+
+  }
+
   return (
     <div>
       <div className="reserved bg-[#222327] text-white ">
@@ -33,7 +51,9 @@ function Header() {
     </ul>
   </div>
   <div className="navbar-end">
-    <NavLink to={"login"} className="btn btn-ghost btn-primary text-white ">Login</NavLink>
+    {
+      user ? (<button onClick={handleLogout} className='btn btn-ghost btn-primary text-white'>Log Out</button>) : (<NavLink to={"/login"} className="btn btn-ghost btn-primary text-white ">Login</NavLink>)
+    }
   </div>
 </div>
       </div>

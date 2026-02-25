@@ -20,8 +20,7 @@ const singleGame = games.find(game => game.id === id);
       <p>Developer: {singleGame.developer}</p>
       <p>Rating: ⭐ {singleGame.ratings}</p>
       <a 
-        href={singleGame.downloadLink} 
-        target="_blank" 
+        
         className="btn btn-primary mt-4"
       >
         Download
