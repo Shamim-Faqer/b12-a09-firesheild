@@ -13,7 +13,7 @@ const {games} = useContext(GameContext);
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
           games.slice(0, 6).map(game => (
-            <div key={game.id} className="card p-4 shadow-md rounded-xl bg-[#222327] hover:scale-105 transition-transform">
+            <NavLink to={`/gamedetails/${game.id}`} key={game.id} className="card p-4 shadow-md rounded-xl bg-[#222327] hover:scale-105 transition-transform">
               <img 
                 src={game.image || game.coverPhoto} 
                 alt={game.title} 
@@ -27,7 +27,7 @@ const {games} = useContext(GameContext);
                 <span className='text-sm font-semibold'>🛠 {game.developer}</span>
                 <span className='text-yellow-500 font-bold'>⭐ {game.ratings}</span>
               </div>
-            </div>
+            </NavLink>
           ))
         }
       </div>

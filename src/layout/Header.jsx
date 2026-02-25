@@ -15,6 +15,7 @@ function Header() {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <NavLink>Home</NavLink>
         <NavLink>About</NavLink>
         <NavLink to={"games"}>Games</NavLink>
         <NavLink>Contact us</NavLink>
@@ -25,9 +26,10 @@ function Header() {
   </div>
   <div className="navbar-center hidden lg:flex ">
     <ul className="menu menu-horizontal">
-      <NavLink className="p-3" >About</NavLink>
-        <NavLink to={"games"} className="p-3">Games</NavLink>
-        <NavLink className="p-3">Contact us</NavLink>
+      <NavLink to={"/"} className="link link-hover p-3">Home</NavLink>
+      <NavLink className="link link-hover p-3" >About</NavLink>
+        <NavLink to={"games"} className="link link-hover p-3">Games</NavLink>
+        <NavLink className="link link-hover p-3">Contact us</NavLink>
     </ul>
   </div>
   <div className="navbar-end">

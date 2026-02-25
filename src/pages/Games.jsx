@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GameContext } from '../provider/GameProvider';
+import { NavLink } from 'react-router-dom';
 
 function Games() {
  const {games} = useContext(GameContext);
@@ -33,14 +34,14 @@ function Games() {
         <div className="games col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {
             filteredGame.map(game => (
-              <div key={game.id} className="card border p-3 shadow-sm rounded-lg">
+              <NavLink to={`/gamedetails/${game.id}`} key={game.id} className="card border p-3 shadow-sm rounded-lg">
                 <img src={game.coverPhoto} alt="" />
                 <h3 className='font-bold'>{game.title}</h3>
                 <p className='text-sm text-gray-500'>{game.category}</p>
                 <p className='text-xs my-2'>{game.description}</p>
                 <p className='text-sm font-semibold'>Dev: {game.developer}</p>
                 <p className='text-yellow-600'>Rating: {game.ratings}</p>
-              </div>
+              </NavLink>
             ))
           }
         </div>

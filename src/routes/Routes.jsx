@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import Games from "../pages/Games";
 import GameDetails from "../pages/GameDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -32,9 +33,13 @@ export const router = createBrowserRouter([
                 element: <Games />,
               },
               {
-                path:"gamedetails",
-                element: <GameDetails />,
-              }
+                path:"gamedetails/:id",
+                element:(
+                  <PrivateRoutes>
+                     <GameDetails />
+                  </PrivateRoutes>
+                ),
+              },
     ]
   },
 ]);

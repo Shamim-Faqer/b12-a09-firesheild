@@ -1,10 +1,31 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import {AuthContext} from "../provider/AuthProvider";
 
 function Register() {
+const {registerUser} = useContext(AuthContext);
+const navigate = useNavigate();
+
+const handleRegister = (e) => {
+e.preventDefault();
+
+const name = e.target.name.value;
+const pnno = e.target.pnno.value;
+const email = e.target.email.value;
+const password = e.target.password.value;
+
+registerUser(email, password)
+.then(()=> {
+  navigate("/login");
+})
+.catch(error=>console.log(error));
+
+
+
+}
+
   return (
-    <div>
-      <div>
+    
         <div>
 <div className="reserved flex flex-col justify-center items-center">
   <div className="content">
@@ -13,27 +34,26 @@ function Register() {
   </div>
   <div className="body">
      <div className="card bg-[#222327] w-full max-w-sm shrink-0 shadow-2xl">
-      <div className="card-body">
+      <form onSubmit={handleRegister} className="card-body">
         <fieldset className="fieldset">
           <label className="label">Name</label>
-          <input type="email" className="input" placeholder="Email" />
+          <input name='name' type="text" className="input text-black" placeholder="Your name here" />
           <label className="label">Mobile No</label>
-          <input type="password" className="input" placeholder="Password" />
+          <input name='pnno' type="text" className="input text-black" placeholder="Mobile no" />
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
+          <input name='email' type="email" className="input text-black" placeholder="Email" required />
           <label className="label">Password</label>
-          <input type="password" className="input" placeholder="Password" />
+          <input name='password' type="password" className="input text-black" placeholder="Password" required />
           
           <button className="btn btn-primary mt-4">Login</button>
           <div>Dont have an Account ? <NavLink to={"/login"} className='text-secondary link link-hover'>Register</NavLink></div>
         </fieldset>
-      </div>
+      </form>
     </div>
   </div>
 </div>
     </div>
-      </div>
-    </div>
+     
   )
 }
 

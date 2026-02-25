@@ -4,12 +4,14 @@ import './index.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes/Routes';
 import GameProvider from './provider/GameProvider.jsx';
-
+import AuthProvider from './provider/AuthProvider.jsx'; 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <GameProvider>
-    <RouterProvider router={router} />
-  </GameProvider>
+    <AuthProvider>
+      <GameProvider>
+        <RouterProvider router={router} />
+      </GameProvider>
+    </AuthProvider>
   </StrictMode>,
 )
