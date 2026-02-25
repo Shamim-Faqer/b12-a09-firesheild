@@ -15,14 +15,13 @@ function Games() {
     <div className='p-5'>
       <h2 className='text-2xl font-bold mb-4'>Popular Games are here...</h2>
       
-      <div className='grid grid-cols-4 gap-4'> {/* মেইন গ্রিড ৪ কলামের */}
+      <div className='grid grid-cols-4 gap-4'> 
         
-        {/* ক্যাটাগরি সেকশন (১ কলাম) */}
         <div className="category col-span-1 flex flex-col gap-2">
           {selectedCategories.map(cata => (
             <button 
               key={cata} 
-              onClick={() => setCategory(cata)} // ক্যাটাগরি চেঞ্জ করার ফাংশন
+              onClick={() => setCategory(cata)} 
               className={`btn ${category === cata ? 'btn-primary' : 'btn-outline'}`}
             >
               {cata}
@@ -30,7 +29,7 @@ function Games() {
           ))}
         </div>
 
-        {/* গেম কার্ড সেকশন (৩ কলাম) */}
+        
         <div className="games col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {
             filteredGame.map(game => (

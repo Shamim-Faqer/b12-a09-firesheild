@@ -6,7 +6,7 @@ function Contactus() {
     <div className="p-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         
-        {/* Left Side: Text and Image */}
+      
         <div className="left flex-1 space-y-6">
           
           
@@ -19,7 +19,7 @@ function Contactus() {
           </div>
         </div>
 
-        {/* Right Side: Contact Form */}
+    
         <div className="right flex-1 bg-[#222327] p-8 rounded-2xl shadow-xl w-full">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
            Send Us a Message.  
