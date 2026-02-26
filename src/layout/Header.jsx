@@ -61,13 +61,13 @@ function Header() {
       <NavLink to="/" onClick={handleMenuClose} className="block p-2 hover:bg-gray-700 rounded">
         Home
       </NavLink>
-      <NavLink onClick={handleMenuClose} className="block p-2 hover:bg-gray-700 rounded">
+      <NavLink to="/about" onClick={handleMenuClose} className="block p-2 hover:bg-gray-700 rounded">
         About
       </NavLink>
       <NavLink to="/games" onClick={handleMenuClose} className="block p-2 hover:bg-gray-700 rounded">
         Games
       </NavLink>
-      <NavLink onClick={handleMenuClose} className="block p-2 hover:bg-gray-700 rounded">
+      <NavLink to="/contact" onClick={handleMenuClose} className="block p-2 hover:bg-gray-700 rounded">
         Contact Us
       </NavLink>
     </div>
@@ -90,7 +90,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink className="link link-hover p-3">
+              <NavLink to="/about" className="link link-hover p-3">
                 About
               </NavLink>
             </li>
@@ -100,7 +100,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink className="link link-hover p-3">
+              <NavLink to="/contact" className="link link-hover p-3">
                 Contact Us
               </NavLink>
             </li>
