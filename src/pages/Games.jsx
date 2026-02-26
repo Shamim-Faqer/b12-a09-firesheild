@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GameContext } from '../provider/GameProvider';
 import { NavLink } from 'react-router-dom';
+import heroImg from "../assets/hero.jpeg";
 
 function Games() {
  const {games} = useContext(GameContext);
@@ -13,7 +14,25 @@ function Games() {
   const filteredGame = category === "All" ? games : games.filter(game => game.category === category);
 
   return (
-    <div className='p-5'>
+
+<div>
+
+
+<div className="hero">
+  <div
+  className="min-h-screen  bg-cover bg-center flex items-end justify-center pb-6"
+  style={{ backgroundImage: `url(${heroImg})` }}
+>
+  <div className="text-white p-6 text-center ">
+   
+    <h1 className="text-4xl md:text-6xl font-bold">Browse the most Popular games from online.</h1>
+    <p className="py-6">Discover, download, and play thousands of top-rated games instantly. 
+  </p>
+
+  </div>
+</div>
+</div>
+ <div className='p-5'>
       <h2 className='text-2xl font-bold mb-4'>Popular Games are here...</h2>
       
       <div className='grid grid-cols-4 gap-4'> 
@@ -47,7 +66,11 @@ function Games() {
         </div>
 
       </div>
-    </div>
+ </div>
+
+
+
+</div>
   );
 }
 

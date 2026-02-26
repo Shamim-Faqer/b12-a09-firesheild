@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImg from "../assets/hero.jpeg"
+import Banner from './Banner';
 
 function Hero() {
   return (
@@ -9,6 +10,7 @@ function Hero() {
   style={{ backgroundImage: `url(${heroImg})` }}
 >
   <div className="text-white p-6 text-center ">
+    <Banner></Banner>
     <h1 className="text-4xl md:text-6xl font-bold">The Ultimate Gaming Universe in One App</h1>
     <p className="py-6">Discover, download, and play thousands of top-rated games instantly. 
   Everything you love about gaming — all in one powerful platform. Browse thousands of curated titles, fast downloads, secure installs, 

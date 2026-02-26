@@ -4,12 +4,14 @@ import NewsLetter from '../components/NewsLetter';
 import Aboutme from '../components/Aboutme';
 import Contactus from '../components/Contactus';
 import TrendingGames from '../layout/TrendingGames';
+import Banner from '../components/Banner';
 
 
 
 function Home() {
   return (
   <div>
+    
     <Hero></Hero>
       <NewsLetter></NewsLetter>
       <TrendingGames></TrendingGames>
