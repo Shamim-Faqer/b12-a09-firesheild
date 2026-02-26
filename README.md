@@ -1,16 +1,47 @@
-# React + Vite
+# 🔥 FireShield - Gaming Library Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Project Purpose
 
-Currently, two official plugins are available:
+FireShield একটি Gaming Library ওয়েব অ্যাপ যেখানে ইউজাররা বিভিন্ন গেম ব্রাউজ করতে পারে, গেমের ডিটেইল দেখতে পারে এবং লগইন সিস্টেমের মাধ্যমে অ্যাক্সেস কন্ট্রোল পায়।  
+এই প্রজেক্টটি React, Firebase Authentication এবং Tailwind CSS ব্যবহার করে তৈরি করা হয়েছে।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌐 Live URL
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://b12-a09-websheild.netlify.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Key Features
+
+- 🔐 User Authentication (Login / Register / Logout)
+- 🔄 Protected Routes (Private Route System)
+- 🎮 Dynamic Game Listing from JSON Data
+- 📱 Fully Responsive (Mobile, Tablet, Desktop)
+- 🎨 Modern UI using Tailwind CSS & DaisyUI
+- 🔍 Game Details Dynamic Route
+- 🚀 Clean Component Structure
+- 🌙 Dark Theme UI Design
+
+---
+
+## 🛠️ Technologies Used
+
+- React
+- React Router DOM
+- Firebase Authentication
+- Tailwind CSS
+- DaisyUI
+- Context API
+- JSON Data Handling
+
+---
+
+## 📦 NPM Packages Used
+
+```bash
+npm install react-router-dom
+npm install firebase
+npm install daisyui
+npm install react-icons
